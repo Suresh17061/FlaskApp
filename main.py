@@ -6,7 +6,7 @@ from flask_marshmallow import Marshmallow
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:root@localhost/main"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///./flask.db"
 app.config['JWT_SECRET_KEY'] = 'your-secret-key'
 
 db = SQLAlchemy(app)
